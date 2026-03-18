@@ -10,7 +10,7 @@ Backend Developer focused on AI-driven realtime systems.
 - LLM(OpenAI API)을 활용한 Task Decomposition 기능 구현
 - WebSocket(Socket.io)을 이용한 실시간 상태 동기화
 - 칸반 보드 기반 프로젝트/태스크 CRUD 기능 구현
- https://github.com/Gwanhoo/Capstone-Design
+- https://github.com/Gwanhoo/Capstone-Design
 
 ---
 
@@ -49,7 +49,7 @@ Backend Developer focused on AI-driven realtime systems.
 - 사용자 및 게시글 CRUD, 댓글/추천/태그/검색 기능 개발
 - 카카오 소셜 로그인(OAuth) 적용
 
-https://github.com/Gwanhoo/My_BackEnd_CRUD_Project.git
+- https://github.com/Gwanhoo/My_BackEnd_CRUD_Project.git
 
 
 ### 팀 프로젝트 (Codeit Bootcamp)
@@ -57,9 +57,9 @@ https://github.com/Gwanhoo/My_BackEnd_CRUD_Project.git
 - Git을 활용한 협업 및 코드 관리 경험
 - 컴포넌트 기반 UI 설계 및 상태 관리 경험
 
-https://github.com/fe11-part4-team3/coworkers.git
-https://github.com/codeit-fe11-part3-team4/linkbrary.git
-https://github.com/Sprint-11-4team/sprint-linkshop.git
+- https://github.com/fe11-part4-team3/coworkers.git
+- https://github.com/codeit-fe11-part3-team4/linkbrary.git
+- https://github.com/Sprint-11-4team/sprint-linkshop.git
 
 ---
 
