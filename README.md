@@ -2,6 +2,8 @@
 
 Backend Developer focused on AI-driven realtime systems.
 
+my github link
+- https://github.com/Gwanhoo
 ---
 
 ## Main Project
