@@ -136,9 +136,25 @@ GitHub: https://github.com/fe11-part4-team3/coworkers.git
 
 ---
 
-## 📘 학습 노트 (추가 예정)
+##  학습 노트
 
-* WebSocket / Backend / MongoDB 학습 내용을 별도 레포지토리로 정리 예정
-* 실시간 통신 구조, 서버 아키텍처, 데이터 모델링을 중심으로 정리
+실시간 통신, 서버 아키텍처, 데이터 모델링에 대한 학습 내용을  
+별도의 레포지토리에 정리하고 있습니다.
 
-👉 (추후 추가 예정)
+단순 개념 정리가 아닌, **프로젝트에 실제 적용하기 위한 관점**에서  
+구조와 흐름 중심으로 학습 내용을 기록했습니다.
+
+### 🔹 Backend
+- 서버 구조 설계 및 API 흐름 정리
+- 비동기 처리 및 이벤트 루프 이해
+👉 https://github.com/Gwanhoo/backend-learning-log/blob/main/backend/README.md
+
+### 🔹 Database
+- MongoDB 기반 데이터 모델링 설계
+- 컬렉션 구조 및 CRUD 처리 흐름 정리
+👉 https://github.com/Gwanhoo/backend-learning-log/blob/main/database/README.md
+
+### 🔹 WebSocket
+- 실시간 통신 구조 및 이벤트 기반 흐름 정리
+- 상태 동기화 방식 및 채팅 시스템 구조 분석
+👉 https://github.com/Gwanhoo/backend-learning-log/blob/main/websocket/README.md
