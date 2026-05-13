@@ -19,15 +19,18 @@ AI 기반 실시간 협업 시스템 개발에 관심을 가진 백엔드 개발
 
 ### Backend
 
-* Node.js / Express: REST API 설계 및 서버 구조 설계
+* [Node.js / Express](https://github.com/Gwanhoo/backend-learning-log/blob/main/backend/README.md)
+  : REST API 설계 및 서버 구조 설계
 
 ### Realtime
 
-* WebSocket (Socket.io): 실시간 데이터 동기화 및 채팅 기능 구현
+* [WebSocket (Socket.io)](https://github.com/Gwanhoo/backend-learning-log/blob/main/websocket/README.md)
+  : 실시간 데이터 동기화 및 채팅 기능 구현
 
 ### Database
 
-* MongoDB: 컬렉션 설계 및 CRUD 데이터 처리
+* [MongoDB](https://github.com/Gwanhoo/backend-learning-log/blob/main/database/README.md)
+  : 컬렉션 설계 및 CRUD 데이터 처리
 
 ### AI
 
