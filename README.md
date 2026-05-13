@@ -90,7 +90,8 @@ GitHub: https://github.com/Gwanhoo/My_BackEnd_CRUD_Project
 GitHub: https://github.com/Gwanhoo/abydos_app.git
 배포: https://abydos-app.vercel.app/
 
-<img width="1409" height="1185" alt="image" src="https://github.com/user-attachments/assets/c074da86-848e-4457-b15c-26ae4f622fc3" />
+<img width="1125" height="1221" alt="image" src="https://github.com/user-attachments/assets/0fb2ebd4-b18c-423d-83e0-180c4f567caa" />
+
 
 
 ---
