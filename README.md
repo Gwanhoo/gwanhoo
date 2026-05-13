@@ -90,11 +90,12 @@ GitHub: https://github.com/Gwanhoo/My_BackEnd_CRUD_Project
 GitHub: https://github.com/Gwanhoo/abydos_app.git
 배포: https://abydos-app.vercel.app/
 
+<img width="1409" height="1185" alt="image" src="https://github.com/user-attachments/assets/c074da86-848e-4457-b15c-26ae4f622fc3" />
+
+
 ---
 
-## 협업 프로젝트 (Codeit)
-
-### 1. LinkShop (쇼핑몰 서비스)
+### 4. LinkShop (쇼핑몰 서비스)
 
 * 상품 관리 기능 중 **수정/삭제 페이지 UI 구현 담당**
 
@@ -107,12 +108,13 @@ GitHub: https://github.com/Gwanhoo/abydos_app.git
 GitHub: https://github.com/Sprint-11-4team/sprint-linkshop
 배포: https://project-linkshop.netlify.app
 
-<img width="1227" height="1137" alt="image" src="https://github.com/user-attachments/assets/33c2cbe9-97eb-4576-afa2-186acb409454" />
+<img width="1183" height="892" alt="image" src="https://github.com/user-attachments/assets/f27f764c-0440-40eb-8661-236082986b2c" />
+
 
 
 ---
 
-### 2. Linkbrary (링크 공유 서비스)
+### 5. Linkbrary (링크 공유 서비스)
 
 * **로그인 / 회원가입 페이지 UI 구현 담당**
 
@@ -125,12 +127,13 @@ GitHub: https://github.com/Sprint-11-4team/sprint-linkshop
 GitHub: https://github.com/codeit-fe11-part3-team4/linkbrary.git
 배포: https://fe11-team4-linkbrary.netlify.app/
 
-<img width="682" height="811" alt="image" src="https://github.com/user-attachments/assets/4476dd7b-a211-4bf0-87bb-2442cf3f8260" />
+<img width="2321" height="1144" alt="image" src="https://github.com/user-attachments/assets/51c93b84-46cc-4ba9-af95-43370cdd9872" />
+
 
 
 ---
 
-### 3. Coworkers (협업 서비스 랜딩페이지)
+### 6. Coworkers (협업 서비스 랜딩페이지)
 
 * **메인 랜딩 페이지 UI 구현 담당**
 
