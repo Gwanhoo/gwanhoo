@@ -1,4 +1,4 @@
-# 안녕하세요, 김관호입니다
+안녕하세요, 김관호입니다
 
 AI 기반 실시간 협업 시스템 개발에 관심을 가진 백엔드 개발자입니다.
 서버에서의 데이터 흐름을 설계하고, 클라이언트와의 통신을 처리하는 과정에 흥미를 느껴 백엔드 개발에 집중하고 있습니다.
@@ -43,60 +43,103 @@ AI 기반 실시간 협업 시스템 개발에 관심을 가진 백엔드 개발
 
 ---
 
-## 프로젝트
+# 프로젝트
 
-### 1. AI 기반 실시간 협업 칸반 시스템
+## 1. AI 기반 실시간 협업 칸반 시스템
 
-* LLM(OpenAI API)을 활용한 Task Decomposition 기능 구현
-* WebSocket(Socket.io)을 이용한 실시간 상태 동기화
-* 칸반 보드 기반 프로젝트/태스크 CRUD 기능 구현
+### 소개
+LLM(OpenAI API)을 활용하여 작업(Task)을 자동 분해하고,  
+WebSocket 기반 실시간 협업 기능을 제공하는 칸반 프로젝트 관리 시스템 구현
 
-**기술적 특징**
+### 주요 기능
+- OpenAI API 기반 Task Decomposition 기능 구현
+- WebSocket(Socket.io)을 활용한 실시간 채팅 및 상태 동기화
+- 프로젝트 / 태스크 / 멤버 CRUD 기능 구현
+- 프로젝트 초대 및 협업 기능 구현
+- 칸반 보드 기반 태스크 상태 관리 구현
 
-* 실시간 협업 환경에서 상태 동기화를 위한 WebSocket 구조 설계
-* AI를 활용한 작업 자동 분해 기능을 통해 사용자 생산성 향상
-* 서버 중심 데이터 흐름 설계를 기반으로 기능 구현
+### 기술적 특징
+- Socket.io Room 기반 프로젝트 단위 실시간 통신 구조 설계
+- REST API + WebSocket 혼합 구조를 통한 데이터 흐름 설계
+- MongoDB 스키마 분리를 통한 프로젝트/멤버/메시지 데이터 관리
+- 실시간 이벤트 중복 처리 및 상태 동기화 문제 해결
+- Next.js 기반 컴포넌트 단위 UI 구조 설계 및 상태 관리 적용
 
-GitHub: https://github.com/Gwanhoo/Capstone-Design
+### 사용 기술
+- Frontend: React, Next.js, Tailwind CSS
+- Backend: Node.js, Express
+- Database: MongoDB, Mongoose
+- Realtime: Socket.io
+- AI: OpenAI API
+
+GitHub:  
+https://github.com/Gwanhoo/Capstone-Design
+
+---
+
+## 2. 코사모 (코딩할 사람들의 모임)
+
+### 소개
+개발자 커뮤니티를 목표로 한 웹 서비스로,  
+실시간 채팅과 사용자 간 커뮤니케이션 기능 중심으로 구현
+
+### 주요 기능
+- Socket.io 기반 실시간 채팅 기능 구현
+- 사용자 / 게시글 / 댓글 CRUD 기능 구현
+- 카카오 OAuth 로그인 기능 적용
+- 사용자 인증 및 세션 관리 구현
+
+### 기술적 특징
+- 이벤트 기반 실시간 채팅 구조 설계
+- REST API 기반 게시글 및 사용자 데이터 관리
+- OAuth 인증 흐름 및 로그인 상태 처리 경험
+- 프론트엔드와 백엔드 분리 구조 기반 서비스 구현
+
+### 사용 기술
+- Frontend: React
+- Backend: Node.js, Express
+- Database: MongoDB
+- Realtime: Socket.io
+- Auth: Kakao OAuth
+
+GitHub:  
+https://github.com/Gwanhoo/My_BackEnd_CRUD_Project
 
 ---
 
-### 2. 코사모 (코딩할 사람들의 모임)
+## 3. 아비도스 제작 최적화 계산기
 
-* WebSocket(Socket.io)을 활용한 실시간 채팅 기능 구현
-* 사용자 / 게시글 / 댓글 CRUD 기능 구현
-* 카카오 OAuth 기반 로그인 기능 적용
+### 소개
+게임 내 자원 제작 구조를 분석하여,  
+제한된 재료 기준 최대 생산량을 계산하는 최적화 계산기 구현
 
-**기술적 특징**
+### 주요 기능
+- 자원 변환 규칙 기반 생산량 계산 기능 구현
+- 입력값 변화에 따른 실시간 결과 반영
+- 최적 제작 조합 계산 로직 구현
 
-* 이벤트 기반 실시간 채팅 구조 설계 및 구현
-* 인증, 데이터 관리, 실시간 통신을 통합한 서비스 구조 경험
+### 기술적 특징
+- Brute Force + 가지치기 기반 탐색 알고리즘 설계
+- 복잡한 자원 변환 조건을 그래프 형태로 구조화
+- 연산량 감소를 위한 조건 기반 탐색 최적화 적용
+- 사용자 입력 변화에 따른 동적 계산 구조 구현
 
-GitHub: https://github.com/Gwanhoo/My_BackEnd_CRUD_Project
+### 사용 기술
+- Frontend: React, Next.js
+- Styling: Tailwind CSS
+- Deployment: Vercel
 
----
+GitHub:  
+https://github.com/Gwanhoo/abydos_app
 
-### 3. 아비도스 제작 최적화 계산기
+배포:  
+https://abydos-app.vercel.app/
 
-* 자원 변환 규칙 기반 최대 생산량 계산 로직 구현
-* Brute Force + 가지치기 기반 탐색 알고리즘 설계
-* 입력값 변화에 따른 실시간 결과 반영 구조 구현
+<img width="865" height="1604" alt="image" src="https://github.com/user-attachments/assets/c03c9df3-8b07-4e50-ab1d-0f88eec0df4b" />
 
-**기술적 특징**
-
-* 단순 계산이 아닌 최적화 문제 해결 방식으로 로직 설계
-* 복잡한 자원 변환 조건을 구조화하여 계산 정확도 향상
-
-GitHub: https://github.com/Gwanhoo/abydos_app.git
-배포: https://abydos-app.vercel.app/
-
-<img width="1125" height="1221" alt="image" src="https://github.com/user-attachments/assets/0fb2ebd4-b18c-423d-83e0-180c4f567caa" />
-
-
-
----
 
 ### 4. LinkShop (쇼핑몰 서비스)
+
 
 * 상품 관리 기능 중 **수정/삭제 페이지 UI 구현 담당**
 
