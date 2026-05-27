@@ -75,6 +75,70 @@ WebSocket 기반 실시간 협업 기능을 제공하는 칸반 프로젝트 관
 GitHub:  
 https://github.com/Gwanhoo/Capstone-Design
 
+```mermaid
+flowchart LR
+    %% 프론트엔드 영역
+    subgraph Frontend["프론트엔드 (Next.js)"]
+        direction TB
+        UI["대시보드 / 프로젝트 보드"]
+        Auth["인증 (Auth)"]
+        API_C["API 클라이언트"]
+        Socket_C["소켓 클라이언트"]
+    end
+
+    %% 백엔드 영역
+    subgraph Backend["백엔드 (Express 서버)"]
+        direction TB
+        REST["REST API 계층"]
+        Socket_G["Socket.io 게이트웨이"]
+        Service["서비스 계층 (비즈니스 로직)"]
+    end
+
+    %% 데이터베이스 영역
+    subgraph Database["데이터베이스 (MongoDB)"]
+        direction TB
+        M_Proj["프로젝트 모델"]
+        M_Task["작업(Task) 모델"]
+        M_User["사용자(Member) 모델"]
+        M_Chat["채팅(Message) 모델"]
+    end
+
+    %% 외부 API 영역
+    subgraph External["외부 API"]
+        OpenAI["OpenAI API"]
+    end
+
+    %% 메인 데이터 흐름 (큰따옴표로 특수문자 이스케이프 처리)
+    API_C <-->|"CRUD 요청/응답"| REST
+    Socket_C <-->|"실시간 동기화 (WebSockets)"| Socket_G
+    
+    REST --> Service
+    Socket_G --> Service
+    
+    Service <-->|"데이터 읽기/쓰기"| Database
+    Service <-->|"작업 자동 분할 및 우선순위 지정 요청"| OpenAI
+
+    %% 작업 분할(Task Decomposition) 상세 흐름
+    subgraph Flow["AI 작업 분할(Decomposition) 파이프라인 (projectId 기준)"]
+        direction LR
+        Goal["프로젝트 프롬프트 입력"] --> AI_Proc["OpenAI 분석 (하위 작업 분할 및 우선순위 지정)"] 
+        AI_Proc --> Create["세부 작업 생성"] 
+        Create --> Store["MongoDB 저장"] 
+        Store --> Broad["프로젝트 룸 소켓 브로드캐스트"] 
+        Broad --> Update["클라이언트 UI 업데이트"]
+    end
+    
+    %% 스타일링 (GitHub README 최적화용 블루 포인트 컬러)
+    classDef default fill:#f8f9fa,stroke:#dee2e6,stroke-width:2px,color:#212529;
+    classDef highlight fill:#e7f1ff,stroke:#0d6efd,stroke-width:2px,color:#084298;
+    classDef db fill:#d1e7dd,stroke:#198754,stroke-width:2px,color:#0f5132;
+    classDef api fill:#fff3cd,stroke:#ffc107,stroke-width:2px,color:#664d03;
+
+    class Frontend,Backend highlight;
+    class Database db;
+    class External,Flow api;
+```
+
 ---
 
 ## 2. 코사모 (코딩할 사람들의 모임)
@@ -107,6 +171,61 @@ https://github.com/Gwanhoo/My_BackEnd_CRUD_Project
 
 <img width="1121" height="772" alt="image" src="https://github.com/user-attachments/assets/ac429af1-b71f-421e-b419-a19d97963012" />
 
+```mermaid
+flowchart LR
+  subgraph FE[프론트엔드]
+    UI[EJS 뷰 / 브라우저 UI]
+    PUB[정적 리소스 / CSS]
+  end
+
+  subgraph BE[백엔드]
+    EX[Express 서버]
+    REST[REST 라우트]
+    SOCK[Socket.IO]
+    AUTH[Passport 인증]
+    MODELS[모델 레이어]
+  end
+
+  subgraph DB[데이터베이스]
+    MDB[(MongoDB)]
+    U[User]
+    P[Post]
+    C[Comment]
+    CM[ChatMessage]
+  end
+
+  subgraph EXT[외부 인증]
+    KAKAO[Kakao OAuth]
+  end
+
+  UI -->|HTTP 요청| REST
+  PUB --> UI
+
+  REST --> EX
+  EX --> AUTH
+
+  AUTH -->|OAuth 이동| KAKAO
+  KAKAO -->|인증 완료 Callback| AUTH
+  AUTH -->|세션 로그인 유지| UI
+
+  UI <-->|Socket 연결| SOCK
+  SOCK -->|join-room / chat-message| EX
+
+  EX -->|데이터 조회 / 저장| MODELS
+  MODELS --> MDB
+
+  MDB --> U
+  MDB --> P
+  MDB --> C
+  MDB --> CM
+
+  EX -->|EJS 렌더링 / JSON 응답| UI
+  SOCK -->|실시간 메시지 브로드캐스트| UI
+```
+
+- 코사모는 Express 기반 서버 렌더링(EJS) 구조 위에서 REST 라우팅과 Socket.IO를 함께 사용하는 개발자 커뮤니티 서비스입니다.
+- 일반 기능(인증, 게시글, 댓글, 프로필)은 REST API와 MongoDB CRUD로 처리하고, 채팅은 Socket.IO 이벤트(`join-room`, `chat-message`)를 통해 실시간 동기화합니다.
+- 사용자 인증은 Passport(Local + Kakao OAuth) 기반이며, 핵심 데이터(`User`, `Post`, `Comment`, `ChatMessage`)는 MongoDB에 저장됩니다.
 
 ---
 
@@ -140,6 +259,19 @@ https://abydos-app.vercel.app/
 
 <img width="865" height="1604" alt="image" src="https://github.com/user-attachments/assets/c03c9df3-8b07-4e50-ab1d-0f88eec0df4b" />
 
+```mermaid
+flowchart TD
+    A[사용자 입력: 보유 재료 / 제작 대상 / 수수료] --> B[시세 데이터 요청]
+    B --> C[Lost Ark 공식 API 조회]
+    C --> D[필요 아이템 최저가 추출]
+    D --> E[입력값 정규화 + 레시피 / 수수료 적용]
+    E --> F[목표 제작 수량 증가]
+    F --> G[자원 변환 조합 탐색]
+    G --> H[불가능한 후보 가지치기]
+    H --> I[최대 제작량 / 최적 조합 선택]
+    I --> J[재료 판매 vs 제작 판매 손익 계산]
+    J --> K[결과 UI 반영]
+```
 
 ### 4. LinkShop (쇼핑몰 서비스)
 
