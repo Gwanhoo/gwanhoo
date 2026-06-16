@@ -163,3 +163,11 @@ https://fe11-team4-linkbrary.netlify.app/
 
 GitHub  
 https://github.com/fe11-part4-team3/coworkers.git
+
+## 학습 기록
+
+Node.js, MongoDB, WebSocket, OpenAI API 학습 내용을 정리한 저장소입니다.
+
+GitHub
+https://github.com/Gwanhoo/backend-learning-log.git
+
