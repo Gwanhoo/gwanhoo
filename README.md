@@ -34,7 +34,8 @@ AI 기반 실시간 협업 시스템 개발에 관심을 가진 백엔드 개발
 
 ### AI
 
-* OpenAI API: 작업 분해(Task Decomposition) 기능 구현
+* [OpenAI API](https://github.com/Gwanhoo/backend-learning-log/blob/main/AI/README.md)
+  : 작업 분해(Task Decomposition) 기능 구현
 
 ### Frontend
 
