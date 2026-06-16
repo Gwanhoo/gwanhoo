@@ -67,6 +67,9 @@ Socket.io 기반 실시간 협업 기능을 구현한 칸반 프로젝트 관리
 GitHub  
 https://github.com/Gwanhoo/Capstone-Design
 
+배포
+https://capstone-design-rho.vercel.app/
+
 ---
 
 ## 2. 코사모 (코딩할 사람들의 모임)
